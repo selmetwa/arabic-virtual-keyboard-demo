@@ -1,0 +1,167 @@
+@-ms-viewport {
+  width: device-width;
+}
+
+body {
+  background-color: #fafafa;
+  font-family: Helvetica, Arial, sans-serif;
+  overflow-x: hidden;
+  color: #2E282A;
+}
+
+main {
+  margin: auto;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  align-items: center;
+  width: 100%;
+  /* width: max-content; */
+  background-color: #F2F6F7;
+  justify-content: center;
+}
+
+.keyboard-wrapper {
+  margin-top: 20px;
+}
+
+header {
+  width: 100%;
+}
+
+arabic-keyboard {
+  display: block;
+  margin-top: 20px;
+  --max-keyboard-width: 100%
+}
+
+section {
+  margin-top: 36px;
+}
+
+p {
+  font-size: 18px;
+  line-height: 1.5;
+  margin: 4px 0;
+}
+
+h1 {
+  color: #2E282A;
+  font-weight: 900;
+  font-size: 36px;
+}
+
+h3 {
+  color: #2E282A;
+  font-weight: 900;
+  font-size: 24px;
+}
+
+span {
+  display: inline-block;
+}
+
+.tables {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-top: 24px;
+  width: 100%;
+}
+
+
+/* Mobile */
+
+@media only screen and (min-width: 420px) {
+  .tables {
+    flex-direction: row;
+  }
+}
+
+
+/* Desktop */
+
+@media only screen and (min-width: 900px) {
+  main {
+    padding: 40px;
+    border-right: 1px solid #E6E6E6;
+    border-left: 1px solid #E6E6E6;
+    width: 800px;
+  }
+  header {
+    width: 100%;
+  }
+  .tables {
+    flex-direction: row;
+  }
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  flex: 1;
+}
+
+.table_wrapper {
+  width: 100%;
+}
+
+summary {
+  cursor: pointer;
+}
+
+details>p {
+  font-size: 16px;
+  /* max-width: calc((800px / 2) - 24px); */
+  margin: 6px 0;
+  line-height: 1.25;
+}
+
+table {
+  margin-top: 4px;
+  width: 100%;
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+}
+
+h4 {
+  font-size: 20px;
+  font-weight: 900;
+  text-align: left;
+  margin-bottom: 12px;
+}
+
+strong {
+  font-weight: 900;
+  font-style: italic;
+}
+
+thead {
+  background-color: #E6EEEF;
+  font-size: 18px;
+}
+
+td,
+th {
+  border: 1px solid #6D5F64;
+  text-align: left;
+  padding: 8px;
+}
+
+td {
+  font-size: 20px;
+}
+
+.ar_diacritic {
+  font-size: 40px;
+}
+
+li {
+  margin: 4px 0;
+}
+
+tr:nth-of-type(even) td {
+  background-color: #E6EEEF;
+}
