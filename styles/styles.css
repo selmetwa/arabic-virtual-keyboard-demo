@@ -198,12 +198,14 @@ pre {
   background-color: #eee;
   text-align: left;
   padding: 4px;
+  overflow-wrap: break-word!important;
 }
 
 code {
   background-color: #eee;
   border-radius: 3px;
   text-wrap: wrap;
+  overflow-wrap: break-word!important;
   font-family: courier, monospace;
 }
 
