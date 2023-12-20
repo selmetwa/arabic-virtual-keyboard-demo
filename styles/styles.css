@@ -201,7 +201,7 @@ pre {
   overflow-wrap: break-word!important;
 }
 
-code {
+.code {
   background-color: #eee;
   border-radius: 3px;
   text-wrap: wrap;
