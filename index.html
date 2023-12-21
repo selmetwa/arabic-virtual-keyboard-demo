@@ -365,173 +365,192 @@
         <h4>Installation Via NPM</h4>
         <p class="code">npm i arabic-virtual-keyboard</p>
         <h4>Installation Via CDN</h4>
-        <!-- <pre> -->
         <p class="code">
           &lt;script type="module" src="https://cdn.skypack.dev/arabic-virtual-keyboard"&gt;&lt;/script&gt;
         </p>
-        <!-- </pre> -->
         <h4>Usage</h4>
         <p class="code">
           &lt;arabic-keyboard&gt;&lt;/arabic-keyboard&gt;
         </p>
-        <h4>Attributes</h4>
-        <table>
-          <thead>
-            <tr>
-              <th>Attribute</th>
-              <th>Default</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>
-                <code> showEnglishValue </code>
-                <p>Shows the english value of the key pressed</p>
-              </td>
-              <td>false</td>
-            </tr>
-            <tr>
-              <td>
-                <code> showShiftedValue </code>
-                <p>Shows the shifted value of the key pressed</p>
-              </td>
-              <td>false</td>
-            </tr>
-          </tbody>
-        </table>
-        <h4>Usage with Attributes</h4>
-        <p class="code">
-            &lt;arabic-keyboard
-              showEnglishValue="true" 
-              showShiftedValue="true"
-            &gt;
-            &lt;/arabic-keyboard&gt;
-        </p>
+        <h4>Usage In React</h4>
+        <p>This requires use of the <pre><code>@lit/react</> package</code></pre>
+          <pre><p class="code">npm install @lit/react
+        
+        import React from 'react';
+        
+        import { ArabicKeyboard as ArabicKeyboardWC } from 'arabic-virtual-keyboard'
+        import { createComponent } from '@lit/react';
+        
+        const ArabicKeyboard = createComponent({
+          tagName: 'arabic-keyboard',
+          elementClass: ArabicKeyboardWC,
+          react: React,
+        });
+        
+        function App() {
+          return (
+            &lt;div&gt;
+              &lt;ArabicKeyboard showEnglishValue="true" showShiftedValue="true"&gt;&lt;/ArabicKeyboard&gt;
+            &lt;/div&gt;
+          )
+        }
+        
+        export default App
+        </p></pre>
+          <h4>Attributes</h4>
+          <table>
+            <thead>
+              <tr>
+                <th>Attribute</th>
+                <th>Default</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <code> showEnglishValue </code>
+                  <p>Shows the english value of the key pressed</p>
+                </td>
+                <td>false</td>
+              </tr>
+              <tr>
+                <td>
+                  <code> showShiftedValue </code>
+                  <p>Shows the shifted value of the key pressed</p>
+                </td>
+                <td>false</td>
+              </tr>
+            </tbody>
+          </table>
+          <h4>Usage with Attributes</h4>
+          <p class="code">
+            &lt;arabic-keyboard showEnglishValue="true" showShiftedValue="true" &gt; &lt;/arabic-keyboard&gt;
+          </p>
 
-        <h4>Styling</h4>
-        <p>Restyle the keyboard by utilizing css custom properties</p>
-        <table>
-          <thead>
-            <tr>
-              <th>Property</th>
-              <th>Default</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>
-                <code> --keyboard-row-gap </code>
-                <p>The gap between rows</p>
-              </td>
-              <td>4px</td>
-            </tr>
-            <tr>
-              <td>
-                <code> --font-size </code>
-                <p>The font size of the keys</p>
-              </td>
-              <td>18px</td>
-            </tr>
-            <tr>
-              <td>
-                <code> --max-keyboard-width </code>
-                <p>The maximum width of the keyboard</p>
-              </td>
-              <td>800px</td>
-            </tr>
-            <tr>
-              <td>
-                <code> --row-height </code>
-                <p>The height of each row</p>
-              </td>
-              <td>50px</td>
-            </tr>
-            <tr>
-              <td>
-                <code> --border-radius </code>
-                <p>The border radius of the keys</p>
-              </td>
-              <td>4px</td>
-            </tr>
-            <tr>
-              <td>
-                <code> --button-background-color </code>
-                <p>The background color of the keys</p>
-              </td>
-              <td>#ececec</td>
-            </tr>
-            <tr>
-              <td>
-                <code> --border </code>
-                <p>The border of the keys</p>
-              </td>
-              <td>1px solid #999999</td>
-            </tr>
-            <tr>
-              <td>
-                <code> --button-active-background-color </code>
-                <p>The background color of the keys when active</p>
-              </td>
-              <td>#d6d6d6</td>
-            </tr>
-            <tr>
-              <td>
-                <code> --button-active-border </code>
-                <p>The border of the keys when active</p>
-              </td>
-              <td>1px solid #8f8f8f</td>
-            </tr>
-            <tr>
-              <td>
-                <code> --button-padding </code>
-                <p>The padding of the keys</p>
-              </td>
-              <td>4px</td>
-            </tr>
-            <tr>
-              <td>
-                <code> --button-color </code>
-                <p>The color of the keys</p>
-              </td>
-              <td>#000000</td>
-            </tr>
-            <tr>
-              <td>
-                <code> --button-shifted-color </code>
-                <p>The color of the keys when shifted</p>
-              </td>
-              <td>#ff0000</td>
-            </tr>
-            <tr>
-              <td>
-                <code> --button-eng-color </code>
-                <p>The color of the keys when english</p>
-              </td>
-              <td>#0000ff</td>
-            </tr>
-            <tr>
-              <td>
-                <code> --button-hover-background-color </code>
-                <p>The background color of the keys when hovered</p>
-              </td>
-              <td>#e0e0e0</td>
-            </tr>
-            <tr>
-              <td>
-                <code> --textarea-background-color </code>
-                <p>The background color of the textarea</p>
-              </td>
-              <td>#ffffff</td>
-            </tr>
-            <tr>
-              <td>
-                <code> --font-family </code>
-                <p>The font family of the keys</p>
-              </td>
-              <td>"Arial", sans-serif</td>
-            </tr>
-          </tbody>
-        </table>
+          <h4>Styling</h4>
+          <p>Restyle the keyboard by utilizing css custom properties</p>
+          <table>
+            <thead>
+              <tr>
+                <th>Property</th>
+                <th>Default</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <code> --keyboard-row-gap </code>
+                  <p>The gap between rows</p>
+                </td>
+                <td>4px</td>
+              </tr>
+              <tr>
+                <td>
+                  <code> --font-size </code>
+                  <p>The font size of the keys</p>
+                </td>
+                <td>18px</td>
+              </tr>
+              <tr>
+                <td>
+                  <code> --max-keyboard-width </code>
+                  <p>The maximum width of the keyboard</p>
+                </td>
+                <td>800px</td>
+              </tr>
+              <tr>
+                <td>
+                  <code> --row-height </code>
+                  <p>The height of each row</p>
+                </td>
+                <td>50px</td>
+              </tr>
+              <tr>
+                <td>
+                  <code> --border-radius </code>
+                  <p>The border radius of the keys</p>
+                </td>
+                <td>4px</td>
+              </tr>
+              <tr>
+                <td>
+                  <code> --button-background-color </code>
+                  <p>The background color of the keys</p>
+                </td>
+                <td>#ececec</td>
+              </tr>
+              <tr>
+                <td>
+                  <code> --border </code>
+                  <p>The border of the keys</p>
+                </td>
+                <td>1px solid #999999</td>
+              </tr>
+              <tr>
+                <td>
+                  <code> --button-active-background-color </code>
+                  <p>The background color of the keys when active</p>
+                </td>
+                <td>#d6d6d6</td>
+              </tr>
+              <tr>
+                <td>
+                  <code> --button-active-border </code>
+                  <p>The border of the keys when active</p>
+                </td>
+                <td>1px solid #8f8f8f</td>
+              </tr>
+              <tr>
+                <td>
+                  <code> --button-padding </code>
+                  <p>The padding of the keys</p>
+                </td>
+                <td>4px</td>
+              </tr>
+              <tr>
+                <td>
+                  <code> --button-color </code>
+                  <p>The color of the keys</p>
+                </td>
+                <td>#000000</td>
+              </tr>
+              <tr>
+                <td>
+                  <code> --button-shifted-color </code>
+                  <p>The color of the keys when shifted</p>
+                </td>
+                <td>#ff0000</td>
+              </tr>
+              <tr>
+                <td>
+                  <code> --button-eng-color </code>
+                  <p>The color of the keys when english</p>
+                </td>
+                <td>#0000ff</td>
+              </tr>
+              <tr>
+                <td>
+                  <code> --button-hover-background-color </code>
+                  <p>The background color of the keys when hovered</p>
+                </td>
+                <td>#e0e0e0</td>
+              </tr>
+              <tr>
+                <td>
+                  <code> --textarea-background-color </code>
+                  <p>The background color of the textarea</p>
+                </td>
+                <td>#ffffff</td>
+              </tr>
+              <tr>
+                <td>
+                  <code> --font-family </code>
+                  <p>The font family of the keys</p>
+                </td>
+                <td>"Arial", sans-serif</td>
+              </tr>
+            </tbody>
+          </table>
       </div>
     </section>
     <footer>

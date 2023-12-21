@@ -201,7 +201,20 @@ pre {
   overflow-wrap: break-word!important;
 }
 
+code {
+  display: inline-block;
+  background-color: #eee;
+  border-radius: 3px;
+  text-wrap: wrap;
+  font-size: 18px;
+  line-height: 1.5;
+  margin: 4px 0;
+  overflow-wrap: break-word!important;
+  font-family: courier, monospace;
+}
+
 .code {
+  display: inline-block;
   background-color: #eee;
   border-radius: 3px;
   text-wrap: wrap;
