@@ -374,29 +374,36 @@
         </p>
         <h4>Usage In React</h4>
         <p>This requires use of the <pre><code>@lit/react</> package</code></pre>
-          <pre><p class="code">npm install @lit/react
+          <pre><p class="code">npm install @lit/react</p></pre>
+          <pre>
+            <p class="code">
+import React from 'react';
         
-        import React from 'react';
+import { 
+  ArabicKeyboard as ArabicKeyboardWC 
+} from 'arabic-virtual-keyboard';
+
+import { createComponent } from '@lit/react';
         
-        import { ArabicKeyboard as ArabicKeyboardWC } from 'arabic-virtual-keyboard'
-        import { createComponent } from '@lit/react';
+const ArabicKeyboard = createComponent({
+  tagName: 'arabic-keyboard',
+  elementClass: ArabicKeyboardWC,
+  react: React,
+});
         
-        const ArabicKeyboard = createComponent({
-          tagName: 'arabic-keyboard',
-          elementClass: ArabicKeyboardWC,
-          react: React,
-        });
+function App() {
+  return (
+    &lt;div&gt;
+      &lt;ArabicKeyboard 
+        showEnglishValue="true" 
+        showShiftedValue="true"&gt;
+      &lt;/ArabicKeyboard&gt;
+    &lt;/div&gt;
+  )
+}
         
-        function App() {
-          return (
-            &lt;div&gt;
-              &lt;ArabicKeyboard showEnglishValue="true" showShiftedValue="true"&gt;&lt;/ArabicKeyboard&gt;
-            &lt;/div&gt;
-          )
-        }
-        
-        export default App
-        </p></pre>
+export default App
+</p></pre>
           <h4>Attributes</h4>
           <table>
             <thead>

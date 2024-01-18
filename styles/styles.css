@@ -218,6 +218,8 @@ code {
   background-color: #eee;
   border-radius: 3px;
   text-wrap: wrap;
+  word-wrap: break-word;
+  width: 100%;
   overflow-wrap: break-word!important;
   font-family: courier, monospace;
 }
