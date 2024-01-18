@@ -232,3 +232,8 @@ footer {
   width: 100%;
   border: 1px solid #6D5F64;
 }
+
+footer>a {
+  font-size: 18px;
+  line-height: 1.5;
+}
